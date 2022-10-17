@@ -116,7 +116,7 @@ export function fromAsyncIterable<T>(asyncIterable: AsyncIterable<T>) {
 }
 
 export function fromReadableStreamLike<T>(readableStream: ReadableStreamLike<T>) {
-  return fromAsyncIterable(readableStreamLikeToAsyncGenerator(readableStream));
+  return fromAsyncIterable<T>(readableStreamLikeToAsyncGenerator<T>(readableStream));
 }
 
 async function process<T>(asyncIterable: AsyncIterable<T>, subscriber: Subscriber<T>) {

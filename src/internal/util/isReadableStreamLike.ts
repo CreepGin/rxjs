@@ -1,7 +1,8 @@
 import { ReadableStreamLike } from '../types';
 import { isFunction } from './isFunction';
 
-export async function* readableStreamLikeToAsyncGenerator<T>(readableStream: ReadableStreamLike<T>): AsyncGenerator<T> {
+// AsyncGenerator<T>
+export async function* readableStreamLikeToAsyncGenerator<T>(readableStream: ReadableStreamLike<T>): any {
   const reader = readableStream.getReader();
   try {
     while (true) {

@@ -78,5 +78,6 @@ export function pairs(
  * @deprecated Use `from(Object.entries(obj))` instead. Will be removed in v8.
  */
 export function pairs(obj: any, scheduler?: SchedulerLike) {
+  // @ts-ignore
   return from(Object.entries(obj), scheduler as any);
 }

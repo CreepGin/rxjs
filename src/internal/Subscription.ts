@@ -146,6 +146,7 @@ export class Subscription implements SubscriptionLike {
    */
   private _hasParent(parent: Subscription) {
     const { _parentage } = this;
+    // @ts-ignore
     return _parentage === parent || (Array.isArray(_parentage) && _parentage.includes(parent));
   }
 
